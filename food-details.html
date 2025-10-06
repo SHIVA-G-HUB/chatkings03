@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Details - Chat Kings</title>
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+     <nav class="navbar">
+    <div class="logo"><img src="logo.jpg.png" width="120" height="80" title="ChatKings.in" /></div>
+    <ul class="nav-links">
+       <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html.html">MENU</a></li>
+       <li><a href="#contact">CONTACT</a></li>
+
+    </ul>
+  </nav>
+   <br>
+  <br>
+  <br>
+  <br>
+<section class="food-details" id="food-details">
+    <h1>Loading...</h1>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+    const menuItems = [
+      {name: "Tomato Soup", category: "starters", description: "Classic tomato soup with herbs and cream.", image:"download.jpg"},
+      {name: "Grilled Chicken", category: "main", description: "Juicy grilled chicken with spices and sides.", image:"chicken.jpg"},
+      {name: "Cheese Pizza", category: "main", description: "Mozzarella cheese pizza with fresh basil.", image: "cheese.jpg"},
+      {name: "Chocolate Cake", category: "desserts", description: "Moist chocolate cake with ganache topping.", image: "cc.jpg"},
+      {name: "Spring Rolls", category: "starters", description: "Crispy spring rolls with sweet chili sauce.", image:"sr.jpg"},
+      {name: "Ice Cream Sundae", category: "desserts", description: "Vanilla ice cream with toppings and syrup.", image: "ics.jpg"},
+      {name: "Chicken Lollipop", category:"main", description:"Chicken lollipop is a popular Indian fried chicken appetiser.", image:"cl.jpg"},
+      {name: "Samosa", category: "Snacks", description: "made with a combination of potatoes, peas and spices.", image: "samo.jpg"},
+      {name: "Pani puri", category: "Snacks", description: "The puri shell is typically made with atta.", image: "pani.jpg"},
+      {name: "Dark Chocolate Pudding", category: "desserts", description: "Dark Chocolate Pudding with toppings and syrup.", image: "choco.jpg"},
+      {name: "Corn Cheese Balls", category: "starters", description: "Deep-fried corn and cheese snacks", image:"cb.jpg"},
+      {name: "MuttonKabab Seekh ", category:"main", description:"Minced meat grilled on skewers", image:"mk.jpg"},
+      {name: "Stuffed Mushrooms", category:"Snacks", description:" Cheesy or spiced filling inside mushrooms", image:"sm.jpg"},
+      {name: "Aloo Tikki Chaat", category:"starters", description:"Aloo Tikki Chaat is a supremely popular of North India.", image:"aa.jpg"},
+      {name: "Rasamalai", category:"desserts", description:" The milk is flavored with cardamom  garnished with nuts almonds. ", image:"rr.jpg"}
+    ];
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    const foodName = getQueryParam('name');
+    const food = menuItems.find(item => item.name === foodName);
+
+    const container = document.getElementById('food-details');
+
+    if (food) {
+      container.innerHTML = `
+        <h1>${food.name}</h1>
+        <img src="${food.image}" alt="${food.name}" />
+        <p>${food.description}</p>
+        <button onclick="window.location.href='index.html'">Back to Menu</button>
+      `;
+    } else {
+      container.innerHTML = `<h1>Food not found!</h1>
+        <button onclick="window.location.href='index.html'">Back to Menu</button>`;
+    }
+  </script>
+  <section id="contact">
+  <a href="https://www.instagram.com/p/DK9tIJaBk9O/" target="_blank"> <img src="insta.jpg"height="50px"width="40px"title="Instagram"></a>  <a href="https://api.whatsapp.com/send/?phone=919613481348&text=Hello+Get+Insta+Food&type=phone_number&app_absent=0" target="_blank"><img src="w.jpg"height="50px"width="40px"title="Whatsapp"></a>   <a href="https://www.facebook.com/people/GetInstafood/61577088440158/#" target="_blank"><img src="f.jpg"height="50px"width="40px"title="FaceBook"></a>
+</body>
+</section>
+<footer>
+  <p>@ Chat Kings.All Rights Reserved</p>
+
+</footer>
+</html>
+</html>

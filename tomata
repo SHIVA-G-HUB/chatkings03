@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Kings.in - Accessible</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="logo">
+      <a href="index.html" tabindex="0">
+        <img src="logo.jpg.png" alt="Chat Kings Logo" width="120" height="80" />
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" tabindex="0">HOME</a></li>
+      <li><a href="menu.html" tabindex="0">MENU</a></li>
+      <li><a href="#contact" tabindex="0">CONTACT</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" tabindex="0">Menu</button>
+  </nav>
+
+  <main>
+    <header class="homepage" role="banner">
+      <div class="homepage-text">
+        <h1 tabindex="0">CHAT KINGS</h1>
+      </div>
+      <div class="homepage-image">
+        <img src="home.jpg.png" alt="Image showing Chat Kings ambiance" width="1000" height="800" />
+      </div>
+    </header>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" tabindex="0">About Us</h2>
+      <p tabindex="0">Chat King Restaurant is a vibrant and welcoming destination where taste, tradition, and modern comfort come together.</p>
+      <p tabindex="0">Known for its warm hospitality and inviting atmosphere, Chat King offers a unique dining experience that brings people together over delicious meals.</p>
+      <p tabindex="0">With a focus on quality, freshness, and authentic flavors, the restaurant creates a space where every visit feels special.</p>
+      <p tabindex="0">Whether you're stopping by with friends, family, or on your own, Chat King promises a satisfying experience that leaves you wanting to come back for more.</p>
+      <p tabindex="0">It's not just a place to eat—it's a place to enjoy, relax, and celebrate the joy of good food.</p>
+    </section>
+
+    <section aria-label="Offers">
+      <div role="region" aria-label="Scrolling Offers" tabindex="0">
+        <p>- Big, Biggest Offer - Don't Miss It | Combo Offers | Buy For 499 Get Free Delivery</p>
+      </div>
+    </section>
+
+    <section class="filter-buttons" aria-label="Filter menu by category">
+      <button data-category="starters" tabindex="0">Starters</button>
+      <button data-category="main" tabindex="0">Main Course</button>
+      <button data-category="desserts" tabindex="0">Desserts</button>
+      <button data-category="Snacks" tabindex="0">Snacks</button>
+      <button data-category="all" tabindex="0">All</button>
+    </section>
+
+    <section class="menu-container" id="menu" aria-label="Menu items">
+      <!-- Dynamic menu items inserted here -->
+    </section>
+  </main>
+
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading" tabindex="0">? Contact Us
+    </h2>
+    <p tabindex="0">Email: chatkings123@gmail.com</p>
+    <p tabindex="0">Phone: +91-12345-67890</p>
+    <p tabindex="0">Address: Iyyappanthangal, Chennai, Tamil Nadu</p>
+    <div role="navigation" aria-label="Social Media Links">
+      <a href="https://www.instagram.com/p/DK9tIJaBk9O/" target="_blank" aria-label="Instagram" tabindex="0">
+        <img src="insta.jpg" alt="Instagram" width="40" height="50" />
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=919613481348&text=Hello+Get+Insta+Food" target="_blank" aria-label="WhatsApp" tabindex="0">
+        <img src="w.jpg" alt="WhatsApp" width="40" height="50" />
+      </a>
+      <a href="https://www.facebook.com/people/GetInstafood/61577088440158/#" target="_blank" aria-label="Facebook" tabindex="0">
+        <img src="f.jpg" alt="Facebook" width="40" height="50" />
+      </a>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <p tabindex="0">@ Chat Kings. All Rights Reserved</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
